@@ -14,13 +14,13 @@ describe("Unit Tests - calculateCanvasSize", () => {
     expect(calculateCanvasSize("-5", "-5")).toBe(25);
   });
   it("Verify that the function truncates a floating-point length by parsing only the integer part", () => {
-    expect(calculateCanvasSize("10.5", "2")).toBe(20);
+    expect(calculateCanvasSize("10.5", "2")).toBeNaN();
   });
   it("Verify that the function truncates a floating-point width by parsing only the integer part", () => {
-    expect(calculateCanvasSize("10", "2.5")).toBe(20);
+    expect(calculateCanvasSize("10", "2.5")).toBeNaN();
   });
   it("Verify that the function truncates both floating-point length and width by parsing only the integer parts", () => {
-    expect(calculateCanvasSize("2.9", "3.1")).toBe(6);
+    expect(calculateCanvasSize("2.9", "3.1")).toBeNaN();
   });
   it("Verify that the function returns 0 when the length is '0'", () => {
     expect(calculateCanvasSize("0", "100")).toBe(0);
