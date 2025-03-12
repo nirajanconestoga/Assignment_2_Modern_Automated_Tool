@@ -13,4 +13,7 @@ describe("Unit Tests - calculateCanvasSize", () => {
   it("Verify that the function correctly calculates the canvas size when both length and width are negative", () => {
     expect(calculateCanvasSize("-5", "-5")).toBe(25);
   });
+  it("Verify that the function truncates a floating-point length by parsing only the integer part", () => {
+    expect(calculateCanvasSize("10.5", "2")).toBe(20); // parseInt("10.5") → 10
+  });
 });
