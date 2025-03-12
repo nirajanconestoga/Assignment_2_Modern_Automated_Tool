@@ -9,4 +9,7 @@ describe("paint required calculator", () => {
   it("Verify that the function handles large numbers correctly", () => {
     expect(paintRequiredCalculator(1000, 50)).toBe(20);
   });
+  it("Verify that the function handles decimal coverage correctly", () => {
+    expect(paintRequiredCalculator(50, 7.5)).toBeCloseTo(6.67, 2); // Floating-point rounding
+  });
 });
