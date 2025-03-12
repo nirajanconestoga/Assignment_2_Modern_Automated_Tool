@@ -43,4 +43,7 @@ describe("Unit Tests - calculateCanvasSize", () => {
   it("Verify that the function returns NaN when the length is a non-numeric string", () => {
     expect(calculateCanvasSize("abc", "100")).toBeNaN();
   });
+  it("Verify that the function returns NaN when the width is a non-numeric string", () => {
+    expect(calculateCanvasSize("10", "xyz")).toBeNaN();
+  });
 });
