@@ -22,4 +22,7 @@ describe("Unit Tests - calculateCanvasSize", () => {
   it("Verify that the function truncates both floating-point length and width by parsing only the integer parts", () => {
     expect(calculateCanvasSize("2.9", "3.1")).toBe(6);
   });
+  it("Verify that the function returns 0 when the length is '0'", () => {
+    expect(calculateCanvasSize("0", "100")).toBe(0);
+  });
 });
