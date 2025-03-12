@@ -21,4 +21,7 @@ describe("paint required calculator", () => {
   it("Verify that the function correctly handles floating-point precision cases", () => {
     expect(paintRequiredCalculator(10, 3)).toBeCloseTo(3.33, 2);
   });
+  it("Verify that the function correctly handles very small numbers", () => {
+    expect(paintRequiredCalculator(0.0001, 0.0002)).toBeCloseTo(0.5, 5);
+  });
 });
