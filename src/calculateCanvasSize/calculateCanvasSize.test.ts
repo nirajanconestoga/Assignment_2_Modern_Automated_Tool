@@ -28,4 +28,7 @@ describe("Unit Tests - calculateCanvasSize", () => {
   it("Verify that the function returns 0 when the width is '0'", () => {
     expect(calculateCanvasSize("100", "0")).toBe(0);
   });
+  it("Verify that the function returns 0 when both length and width are '0'", () => {
+    expect(calculateCanvasSize("0", "0")).toBe(0);
+  });
 });
