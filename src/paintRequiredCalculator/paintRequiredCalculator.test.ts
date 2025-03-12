@@ -15,4 +15,7 @@ describe("paint required calculator", () => {
   it("Verify that the function returns 0 when the area is 0", () => {
     expect(paintRequiredCalculator(0, 10)).toBe(0);
   });
+  it("Verify that the function returns Infinity when coverage per liter is 0", () => {
+    expect(paintRequiredCalculator(50, 0)).toBe(Infinity);
+  });
 });
