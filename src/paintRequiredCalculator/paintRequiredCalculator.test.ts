@@ -6,4 +6,7 @@ describe("paint required calculator", () => {
 
     expect(result).toEqual(5);
   });
+  it("Verify that the function handles large numbers correctly", () => {
+    expect(paintRequiredCalculator(1000, 50)).toBe(20);
+  });
 });
