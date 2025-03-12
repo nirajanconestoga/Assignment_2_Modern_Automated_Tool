@@ -18,5 +18,5 @@ describe("Unit Tests - calculateCanvasSize", () => {
   });
   it("Verify that the function truncates a floating-point width by parsing only the integer part", () => {
     expect(calculateCanvasSize("10", "2.5")).toBe(20);
-  });
+ });
 });
