@@ -12,4 +12,7 @@ describe("paint required calculator", () => {
   it("Verify that the function handles decimal coverage correctly", () => {
     expect(paintRequiredCalculator(50, 7.5)).toBeCloseTo(6.67, 2); // Floating-point rounding
   });
+  it("Verify that the function returns 0 when the area is 0", () => {
+    expect(paintRequiredCalculator(0, 10)).toBe(0);
+  });
 });
