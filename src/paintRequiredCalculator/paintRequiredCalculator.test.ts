@@ -18,4 +18,7 @@ describe("paint required calculator", () => {
   it("Verify that the function returns Infinity when coverage per liter is 0", () => {
     expect(paintRequiredCalculator(50, 0)).toBe(Infinity);
   });
+  it("Verify that the function correctly handles floating-point precision cases", () => {
+    expect(paintRequiredCalculator(10, 3)).toBeCloseTo(3.33, 2);
+  });
 });
